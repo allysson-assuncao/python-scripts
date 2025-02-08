@@ -1,0 +1,17 @@
+Algorithm,Size,Time
+QuickSort,1000,0.0
+QuickSort,10000,0.0
+QuickSort,100000,7.0
+QuickSort,1000000,90.0
+CountingSort,1000,0.0
+CountingSort,10000,0.0
+CountingSort,100000,1.0
+CountingSort,1000000,10.0
+RadixSort,1000,0.0
+RadixSort,10000,0.0
+RadixSort,100000,4.0
+RadixSort,1000000,42.0
+BucketSort,1000,0.0
+BucketSort,10000,4.0
+BucketSort,100000,16.0
+BucketSort,1000000,267.0
