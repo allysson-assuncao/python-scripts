@@ -60,23 +60,23 @@ for i, algorithm in enumerate(algorithms):
                  label=f'{algorithm} - {order}',
                  color=colors[i], linestyle=line_styles[j], marker='o')
 
-# Configurações do gráfico de sobreposição
-plt.xlabel('Size of Array')
-plt.ylabel('Average Time (milliseconds)')
-plt.title('Performance Comparison of Sorting Algorithms')
+plt.xlabel('Tamanho do Vetor')
+plt.ylabel('Tempo médio (ms)')
+plt.title('Desempenho Comparativo dos Algoritmos')
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.grid(True)
 
-# Escala logarítmica para o eixo X (tamanho do vetor)
 plt.xscale('log')
+plt.yscale('log')  # Usando escala logarítmica no eixo Y
+plt.ylim(0.001, 400000)
 
-# Escala linear fixa para o eixo Y (tempo em milissegundos)
-plt.ylim(0, 400000)  # Escala do Bubble Sort
+# Configurando formatação do eixo Y para exibir inteiros
+ax = plt.gca()
+ax.yaxis.set_major_formatter(ScalarFormatter())
+ax.yaxis.get_major_formatter().set_scientific(False)
 
-# Marcadores para os tamanhos exatos dos vetores
 plt.xticks(sizes, labels=[str(s) for s in sizes], rotation=45)
 
-# Adicionar "riscos" abaixo de cada ponto
 for size in sizes:
     plt.axvline(x=size, color='gray', linestyle=':', alpha=0.3)
 

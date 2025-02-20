@@ -59,9 +59,9 @@ for i, algorithm in enumerate(algorithms):
                  color=colors[i], linestyle=line_styles[j], marker='o')
 
 # Configurações do gráfico de sobreposição
-plt.xlabel('Size of Array')
-plt.ylabel('Average Time (milliseconds)')
-plt.title('Performance Comparison of Sorting Algorithms')
+plt.xlabel('Tamanho do Vetor')
+plt.ylabel('Tempo médio (ms)')
+plt.title('Desempenho Comparativo dos Algoritmos')
 plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
 plt.grid(True)
 
